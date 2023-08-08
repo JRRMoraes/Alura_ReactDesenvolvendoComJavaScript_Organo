@@ -1,17 +1,40 @@
 import "./Colaborador.css"
+import { AiFillCloseCircle, AiFillHeart, AiOutlineHeart } from "react-icons/ai"
 
-export const Colaborador = ({ nome, cargo, imagem, corPrimaria }) => {
+export const Colaborador = ({
+    colaborador,
+    corCabecalho,
+    aoExcluirColaborador,
+    aoFavoritarColaborador
+}) => {
 
-    const cssPrimaria = { backgroundColor: corPrimaria }
+    const cssCabecalho = { backgroundColor: corCabecalho }
+
 
     return (
         <div className="colaborador">
-            <div className="cabecalho" style={cssPrimaria}>
-                <img src={imagem} alt={nome} />
+            <AiFillCloseCircle className="deletar"
+                onClick={() => aoExcluirColaborador(colaborador.id)}
+                size={24}
+            />
+            <div className="cabecalho" style={cssCabecalho} >
+                <img src={colaborador.imagem} alt={colaborador.nome} />
             </div>
             <div className="rodape">
-                <h4>{nome}</h4>
-                <h5>{cargo}</h5>
+                <h4>{colaborador.nome}</h4>
+                <h5>{colaborador.cargo}</h5>
+                <div className="favorito">
+                    {colaborador.favorito
+                        ? <AiFillHeart onClick={() => aoFavoritarColaborador(colaborador.id)}
+                            size={24}
+                            color="ff0000"
+                        />
+                        : <AiOutlineHeart onClick={() => aoFavoritarColaborador(colaborador.id)}
+                            size={24}
+                            color="ff0000"
+                        />
+                    }
+                </div>
             </div>
         </div>
     )
