@@ -1,6 +1,6 @@
-import "./CampoTexto.css"
+import "./CampoCor.css"
 
-export const CampoTexto = (props) => {
+export const CampoCor = (props) => {
 
     const placeholderModificada = `${props.placeholder}...`
 
@@ -11,9 +11,10 @@ export const CampoTexto = (props) => {
 
 
     return (
-        <div className="campo-texto">
+        <div className="campo-cor">
             <label>{props.label}</label>
-            <input value={props.valor}
+            <input type="color"
+                value={props.valor}
                 onChange={aoDigitar}
                 placeholder={placeholderModificada}
                 required={props.obrigatorio}
