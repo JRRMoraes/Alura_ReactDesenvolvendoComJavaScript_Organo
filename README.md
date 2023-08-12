@@ -3,7 +3,7 @@
 
 Projeto final do curso da Alura "React: desenvolvendo com JavaScript"  ([https://cursos.alura.com.br/course/react-desenvolvendo-javascript]).
 
-Disponível como aplicativo na Vercel em []
+Disponível como aplicativo na Vercel em [https://alura-react-desenvolvendo-com-java-script-organo.vercel.app/]
 ou como código-fonte no GitHub em [https://github.com/JRRMoraes/Alura_ReactDesenvolvendoComJavaScript_Organo]
 
 
